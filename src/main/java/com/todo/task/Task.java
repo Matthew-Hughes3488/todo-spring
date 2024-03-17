@@ -9,7 +9,10 @@ public class Task {
     private int taskId;
     private String task;
     private boolean isComplete;
-    @Autowired
+
+    public Task() {
+    }
+
     public Task(String task){
         this.taskId = numberOfTasks++;
         this.task = task;

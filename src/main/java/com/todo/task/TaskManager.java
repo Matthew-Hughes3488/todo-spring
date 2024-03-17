@@ -1,11 +1,13 @@
 package com.todo.task;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class TaskManager {
     private List<Task> tasks;
 
     public TaskManager() {
+        tasks = new ArrayList<>();
     }
 
     public List<Task> getTasks() {
