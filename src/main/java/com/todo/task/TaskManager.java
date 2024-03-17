@@ -20,4 +20,14 @@ public class TaskManager {
         tasks.removeIf(task -> task.getTaskId() == taskId);
     }
 
+    @Override
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder();
+
+        for(Task task : tasks){
+            stringBuilder.append(String.format("%d: Task:%s Completed:%s", task.getTaskId(), task.getTask(), task.getCompleted()));
+        }
+
+        return stringBuilder.toString();
+    }
 }

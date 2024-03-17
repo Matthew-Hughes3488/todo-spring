@@ -35,4 +35,8 @@ public class Task {
     public void setComplete() {
         isComplete = !isComplete;
     }
+
+    public boolean getCompleted() {
+        return isComplete;
+    }
 }
