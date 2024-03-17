@@ -5,10 +5,13 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Task {
+    private static int numberOfTasks = 0;
+    private int taskId;
     private String task;
     private boolean isComplete;
     @Autowired
     public Task(String task){
+        this.taskId = numberOfTasks++;
         this.task = task;
         isComplete = false;
     }
@@ -19,6 +22,10 @@ public class Task {
 
     public void setTask(String task) {
         this.task = task;
+    }
+
+    public int getTaskId() {
+        return taskId;
     }
 
     public boolean isComplete() {
